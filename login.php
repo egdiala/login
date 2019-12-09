@@ -1,8 +1,9 @@
 <?php
 
-
+header("Access-Control-Allow-Origin: *");
+header('Content-Type: application/json');
 $_POST = json_decode(file_get_contents("php://input"), true);
-// header('Content-Type: application/json');
+
 $uname = $_POST['username'];
 $pwd = $_POST['password'];
 
